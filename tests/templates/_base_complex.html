@@ -1,0 +1,14 @@
+{% extends "mainbase.html" %}
+{% load all the things %}
+
+{% block one %}
+    eins {% include "include.html" %}
+    {% block yes-one %}
+        Y {{ somevar | somefilter }}
+    {% endblock yes-one %}
+    {{ block.super }}
+{% endblock one%}
+
+{% block two %}
+    zwei {% include "include.html" %}
+{% endblock two%}
